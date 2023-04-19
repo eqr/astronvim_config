@@ -69,6 +69,10 @@ return {
   -- augroups/autocommands and custom filetypes also this just pure lua so
   -- anything that doesn't fit in the normal config locations above can go here
   polish = function()
+    vim.keymap.set("n", "<Leader>e", ":Neotree filesystem reveal<CR>")
+    vim.keymap.set("n", "<Leader>fp", ":Telescope commands<CR>")
+    vim.keymap.set("n", "<Leader>pp", ":Copilot panel<CR>")
+
     -- Set up custom filetypes
     -- vim.filetype.add {
     --   extension = {
